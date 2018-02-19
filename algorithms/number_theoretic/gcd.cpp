@@ -1,6 +1,6 @@
 #include "gcd.h"
 
-long long dsa_implemented::gcd(long long a, long long b){
+long long dsa::gcd(long long a, long long b){
     long long r;
     while(b != 0){
         r =  a % b;
@@ -10,7 +10,7 @@ long long dsa_implemented::gcd(long long a, long long b){
     return (a > 0) ? a : -a;
 }
 
-long long dsa_implemented::bgcd(long long a, long long b){
+long long dsa::bgcd(long long a, long long b){
     if( a * b == 0){
     	return (a - b > 0) ? a - b : b - a;
     }
