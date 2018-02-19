@@ -8,19 +8,17 @@ int xrand(int n){
 	return distr(generator);
 }
 
+bool comp(int a, int b) {return a <= b;}
+
 int main(){
     vector<int> myvec, dummyvec;
-    for(int i = 10000; i > 0; i--){
+    for(int i = 100; i > 0; i--){
         myvec.push_back(-13000 + xrand(26000));
     }
     //std::random_shuffle(myvec.begin(), myvec.end(), xrand);
     dummyvec = myvec;
     auto begin = chrono::high_resolution_clock::now();
     sort(dummyvec.begin(), dummyvec.end());
-    /*for(auto v : dummyvec){
-        cout << v << " ";
-    }
-    cout << endl;*/
     auto end = chrono::high_resolution_clock::now();
     double duration = chrono::duration_cast<chrono::microseconds> (end - begin).count() * pow(10, -6);
     cout << duration << endl;
@@ -33,7 +31,6 @@ int main(){
     /*for(auto v : myvec){
         cout << v << " ";
     }*/
-    if(myvec == dummyvec) cout <<"True";
-    else cout << "False";
+    cout << ((myvec == dummyvec) ? "True" : "False");
     cout << endl;
 }
