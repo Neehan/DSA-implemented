@@ -1,5 +1,5 @@
-#ifndef SORTING_HPP
-#define SORTING_HPP
+#ifndef MERGE_SORT_HPP
+#define MERGE_SORT_HPP
 #include <bits/stdc++.h>
 namespace dsa{
     template<typename RandomAccessIterator>
